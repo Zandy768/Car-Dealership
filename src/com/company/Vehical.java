@@ -1,19 +1,21 @@
 package com.company;
 
-public class Vehical extends Inventory
+public class Vehical
 {
+    private int carID;
     private String carMake;
     private String carModel;
-    private int carID;
+
+    public Vehical(int carID, String carMake, String carModel)
+    {
+        this.carID = carID;
+        this.carMake = carMake;
+        this.carModel = carModel;
+    }
 
     public String getCarMake()
     {
         return carMake;
-    }
-
-    public void setCarMake(String carMake)
-    {
-        this.carMake = carMake;
     }
 
     public String getCarModel()
@@ -21,23 +23,13 @@ public class Vehical extends Inventory
         return carModel;
     }
 
-    public void setCarModel(String carModel)
-    {
-        this.carModel = carModel;
-    }
-
     public int getCarID()
     {
         return carID;
     }
 
-    public void setCarID(int carID)
-    {
-        this.carID = carID;
-    }
-
     public String toString()
     {
-        return String.format("%30s%30s%30d%30s\n", carMake, carModel, carID);
+        return("Car ID: " + carID + "\n" + "Make: " + carMake + "\n" + "Model: " + carModel);
     }
 }

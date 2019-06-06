@@ -2,18 +2,20 @@ package com.company;
 
 public class Dealership
 {
+    private int dealershipID;
     private String dealershipName;
     private String dealershipAddress;
-    private int dealershipID;
+
+    public Dealership(int dealershipID, String dealershipName, String dealershipAddress)
+    {
+        this.dealershipID = dealershipID;
+        this.dealershipName = dealershipName;
+        this.dealershipAddress = dealershipAddress;
+    }
 
     public String getDealershipName()
     {
         return dealershipName;
-    }
-
-    public void setDealershipName(String dealershipName)
-    {
-        this.dealershipName = dealershipName;
     }
 
     public String getDealershipAddress()
@@ -21,23 +23,13 @@ public class Dealership
         return dealershipAddress;
     }
 
-    public void setDealershipAddress(String dealershipAddress)
-    {
-        this.dealershipAddress = dealershipAddress;
-    }
-
     public int getDealershipID()
     {
         return dealershipID;
     }
 
-    public void setDealershipID(int dealershipID)
-    {
-        this.dealershipID = dealershipID;
-    }
-
     public String toString()
     {
-        return String.format("%30s%30s%30d%30s\n", dealershipName, dealershipAddress, dealershipID);
+        return("ID: "+ dealershipID + "\n" + "Dealership Name: " + dealershipName + "\n" + "Address: " + dealershipAddress);
     }
 }

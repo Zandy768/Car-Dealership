@@ -2,18 +2,20 @@ package com.company;
 
 public class Customer
 {
+    private int customerID;
     private String customerName;
     private int customerSSN;
-    private int customerID;
+
+    public Customer(int customerID, String customerName, int customerSSN)
+    {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        this.customerSSN = customerSSN;
+    }
 
     public String getCustomerName()
     {
         return customerName;
-    }
-
-    public void setCustomerName(String customerName)
-    {
-        this.customerName = customerName;
     }
 
     public int getCustomerSSN()
@@ -21,23 +23,13 @@ public class Customer
         return customerSSN;
     }
 
-    public void setCustomerSSN(int customerSSN)
-    {
-        this.customerSSN = customerSSN;
-    }
-
     public int getCustomerID()
     {
         return customerID;
     }
 
-    public void setCustomerID(int customerID)
-    {
-        this.customerID = customerID;
-    }
-
     public String toString()
     {
-        return String.format("%30s%30s%30d%30s\n", customerName, customerSSN, customerID);
+        return ("Customer ID: " + customerID + "\n" + "Name: " + customerName + "\n" + "SSN: " + customerSSN);
     }
 }
