@@ -5,7 +5,7 @@ Course: IST 242
 Author: Team 2
 Date Developed: 6/2/19
 Last Date Changed: 6/5/19
-Revision: 3
+Revision: 4
 */
 
 package com.company;
@@ -50,15 +50,21 @@ public class Main
         System.out.println(customer);
 
         Inventory i1 = new Inventory(0,"Used Cars",200);
+        Inventory i2 = new Inventory(1,”New Cars”,100);
         inventory.add(i1.toString());
+        inventory.add(i2.toString());
         System.out.println(inventory);
 
         Vehical v1 = new Vehical(0,"Ford","Focus");
+        Vehicle v2 = new Vehicle(1,”Acura”,”RDX”);
         vehicle.add(v1.toString());
+        vehicle.add(v2.toString());
         System.out.println(vehicle);
 
-        Parts p1= new Parts(0,"Tires",300);
+        Parts p1 = new Parts(0,"Tires",300);
+        Parts p2 = new Parts(1,”Doors”,400);
         parts.add(p1.toString());
+        parts.add(p2.toString());
         System.out.println(parts);
     }
 }
